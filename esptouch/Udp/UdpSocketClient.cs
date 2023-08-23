@@ -127,15 +127,15 @@ namespace EspTouchForCSharp.Udp
                     //string debug = Convert.ToBase64String(data[i]);
                     //System.Console.WriteLine($"data({debug.Length}) {debug}");
 
-                    if(startIdx<0)
-                        startIdx = System.Console.CursorLeft ;
+                    // if(startIdx<0)
+                    //     startIdx = System.Console.CursorLeft ;
                     
                     if(proIdx == maxPro)
                     {
                         proIdx = 0;
-                        System.Console.CursorLeft = startIdx;
-                        System.Console.Write(new string(' ', maxPro));
-                        System.Console.CursorLeft = startIdx;
+                        // System.Console.CursorLeft = startIdx;
+                        // System.Console.Write(new string(' ', maxPro));
+                        // System.Console.CursorLeft = startIdx;
                     }
 
                     System.Console.Write("*");
