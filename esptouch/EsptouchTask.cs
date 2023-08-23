@@ -167,7 +167,8 @@ namespace EspTouchForCSharp
 
         private long currentTimeMillis()
         {
-            return (long)(DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds;
+            DateTimeOffset now = (DateTimeOffset)DateTime.UtcNow;
+            return now.ToUnixTimeMilliseconds();
         }
 
         private readonly object resultLockObject = new object();
